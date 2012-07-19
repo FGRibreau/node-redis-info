@@ -4,7 +4,7 @@
   "description": "Info parser for Redis",
   "main": "index.js",
   "scripts": {
-    "test": "nodeunit test/*"
+      "test": "node_modules/nodeunit/bin/nodeunit test/*.test.js"
   },
   "license": "BSD",
   "devDependencies": {

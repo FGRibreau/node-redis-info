@@ -1,6 +1,5 @@
 var _ = require('lodash');
 
-
 function Parser(info){
   this.info = this._splitStr(info);
 
