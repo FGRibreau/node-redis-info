@@ -8,9 +8,7 @@
   },
   "license": "BSD",
   "devDependencies": {
-    "nodeunit": "~0.7.4",
-    "growl": "~1.5.1",
-    "grunt-shell": "x"
+    "nodeunit": "~0.7.4"
   },
   "dependencies": {
     "lodash": "~0.3.2",
