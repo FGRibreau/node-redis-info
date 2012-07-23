@@ -1,7 +1,11 @@
 var _ = require('lodash');
 
 function Parser(info){
-  this.info = this._splitStr(info);
+  this._info = this._splitStr(info);
+
+  Object.defineProperty(this, 'fields', {
+    get: this.parseFields.bind(this)
+  });
 
   Object.defineProperty(this, 'databases', {
     get: this.parseDatabases.bind(this)
@@ -47,7 +51,16 @@ Parser.prototype._splitStr = function(str){
 Parser.prototype.parseDatabases = function(){
   if(this._databases){return this._databases;}
 
-  return this._databases = this.info.filter(takeFirst(startWith('db'))).map(apply(this._parseDatabaseInfo));
+  return this._databases = this._info.filter(takeFirst(startWith('db'))).map(apply(this._parseDatabaseInfo));
+};
+
+Parser.prototype.parseFields = function() {
+  if(this._fields){return this._fields;}
+
+  return this._fields = this._info.reduce(function(m, v){
+    m[v[0]] = v[1];
+    return m;
+  }, {});
 };
 
 Parser.prototype._parseDatabaseInfo = function(dbName, value) {
@@ -71,7 +84,7 @@ Parser.prototype._parseDatabaseInfo = function(dbName, value) {
  * @return {Array}  an array of [key, value]
  */
 Parser.prototype.startWith = function(pattern){
-  return this.info.filter(takeFirst(startWith(pattern)));
+  return this._info.filter(takeFirst(startWith(pattern)));
 };
 
 /**
@@ -80,7 +93,7 @@ Parser.prototype.startWith = function(pattern){
  * @return {Array}  an array of [key, value]
  */
 Parser.prototype.contains = function(pattern){
-  return this.info.filter(takeFirst(contains(pattern)));
+  return this._info.filter(takeFirst(contains(pattern)));
 };
 
 module.exports = {

@@ -23,6 +23,10 @@ undefined
     keys: 27012,
     expires: 18 },
   { index: 15, keys: 1, expires: 0 } ]
+> info.fields.redis_version
+2.4.10
+> info.fields.redis_git_dirty
+0
 > info.startWith('pubsub')
 [ [ 'pubsub_channels', '2' ],
   [ 'pubsub_patterns', '0' ] ]

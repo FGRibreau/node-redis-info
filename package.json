@@ -1,6 +1,6 @@
 {
   "name": "redis-info",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Info parser for Redis",
   "main": "index.js",
   "scripts": {
