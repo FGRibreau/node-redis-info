@@ -6,14 +6,14 @@ Overview
 
  Redis info string parser
 
-Installation
+Npm
 ------------
 
 ```bash
 npm install redis-info
 ```
 
-Examples
+Usage
 --------
 ```
 > var info = require('redis-info').parse("redis_version:2.4.10\nredis_git_sha1:00000000\nredis_git_dirty:0\narch_bits:64\n ...");
