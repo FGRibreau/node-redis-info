@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Node-redis-info by FGRibreau</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Node-redis-info</h1>
+        <p>Redis info string parser for NodeJS</p>
+        <p class="view"><a href="https://github.com/FGRibreau/node-redis-info">View the Project on GitHub <small>FGRibreau/node-redis-info</small></a></p>
+        <ul>
+          <li><a href="https://github.com/FGRibreau/node-redis-info/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/FGRibreau/node-redis-info/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/FGRibreau/node-redis-info">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Redis-info <a href="http://travis-ci.org/FGRibreau/node-redis-info"><img src="https://secure.travis-ci.org/FGRibreau/node-redis-info.png" alt="Build Status"></a>
+</h1>
+
+<h2>Overview</h2>
+
+<p>Redis info string parser</p>
+
+<h2>Npm</h2>
+
+<div class="highlight">
+<pre>npm install redis-info
+</pre>
+</div>
+
+
+<h2>Usage</h2>
+
+<pre><code>&gt; var info = require('redis-info').parse("redis_version:2.4.10\nredis_git_sha1:00000000\nredis_git_dirty:0\narch_bits:64\n ...");
+undefined
+&gt; info.databases
+[ { index: 0,
+    keys: 27012,
+    expires: 18 },
+  { index: 15, keys: 1, expires: 0 } ]
+&gt; info.fields.redis_version
+2.4.10
+&gt; info.fields.redis_git_dirty
+0
+&gt; info.startWith('pubsub')
+[ [ 'pubsub_channels', '2' ],
+  [ 'pubsub_patterns', '0' ] ]
+&gt; info.contains('memory')
+[ [ 'used_memory', '15080416' ],
+  [ 'used_memory_human', '14.38M' ],
+  [ 'used_memory_rss', '21258240' ],
+  [ 'used_memory_peak', '18985904' ],
+  [ 'used_memory_peak_human', '18.11M' ] ]
+</code></pre>
+
+<h2>License</h2>
+
+<p>Copyright (c) 2012 Francois-Guillaume Ribreau (<a href="mailto:npm@fgribreau.com">npm@fgribreau.com</a>)</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/FGRibreau">FGRibreau</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-1844157-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
