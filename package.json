@@ -1,6 +1,6 @@
 {
   "name": "redis-info",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Info parser for Redis",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "nodeunit": "~0.7.4"
   },
   "dependencies": {
-    "lodash": "~0.3.2",
+    "lodash": "~0.4.2",
     "node-module_exist": "0.0.x"
   }
 }
