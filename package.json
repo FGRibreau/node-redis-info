@@ -1,7 +1,7 @@
 {
   "name": "redis-info",
-  "version": "1.0.1",
-  "description": "Info parser for Redis",
+  "version": "2.0.0",
+  "description": "Info parser for Redis used",
   "main": "index.js",
   "scripts": {
       "test": "node_modules/nodeunit/bin/nodeunit test/*.test.js"

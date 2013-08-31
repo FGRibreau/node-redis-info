@@ -6,14 +6,6 @@ function Parser(info){
   Object.defineProperty(this, 'fields', {
     get: this.parseFields.bind(this)
   });
-
-  Object.defineProperty(this, 'databases', {
-    get: this.parseDatabases.bind(this)
-  });
-
-  Object.defineProperty(this, 'commands', {
-    get: this.parseCommands.bind(this)
-  });
 }
 
 
@@ -55,15 +47,20 @@ Parser.prototype._splitStr = function(str){
 };
 
 Parser.prototype.parseDatabases = function(){
-  if(this._databases){return this._databases;}
-  return this._databases = this._info
+  return this._info
     .filter(takeFirst(startWith('db')))
-    .map(apply(this._parseDatabaseInfo));
+    .map(apply(this._parseDatabaseInfo))
+    .reduce(function(m, v){
+      m[v.index] = {
+        keys: v.keys
+      , expires: v.expires
+      };
+      return m;
+    }, {});
 };
 
 Parser.prototype.parseCommands = function(){
-  if(this._commands){return this._commands;}
-  return this._commands = _.zipObject(this._info
+  return _.zipObject(this._info
     .filter(function(a){return a[0].indexOf('cmdstat_') === 0;})
     .map(apply(this._parseCommands)));
 };
@@ -76,15 +73,18 @@ Parser.prototype._parseCommands = function(v, a){
   return [v.split('_')[1], val];
 };
 
-
-
 Parser.prototype.parseFields = function() {
-  if(this._fields){return this._fields;}
 
-  return this._fields = this._info.reduce(function(m, v){
+  var fields = this._info.reduce(function(m, v){
+    if(!v[0].trim() || v[0].indexOf('db') === 0 || v[0].indexOf('cmdstat_') === 0){return m;}
     m[v[0]] = v[1];
     return m;
-  }, {});
+  }, {
+    databases: this.parseDatabases(),
+    commands: this.parseCommands()
+  });
+
+  return fields;
 };
 
 Parser.prototype._parseDatabaseInfo = function(dbName, value) {
