@@ -30,13 +30,13 @@ exports['.fields'] = function(t){
 exports['.commands'] = function(t){
   var parser = redis_info.parse(info_cmds);
   t.deepEqual(parser.commands, {
-    set: { calls: 1, usec: 15, usec_per_call: 15 },
-    lpush: { calls: 1, usec: 14, usec_per_call: 14 },
-    zadd: { calls: 2, usec: 84, usec_per_call: 42 },
-    hset: { calls: 1, usec: 26, usec_per_call: 26 },
-    keys: { calls: 2, usec: 91, usec_per_call: 45.5 },
-    info: { calls: 5, usec: 807, usec_per_call: 161.4 },
-    ttl: { calls: 1, usec: 6, usec_per_call: 6 },
+    set:     { calls: 1, usec: 15, usec_per_call: 15},
+    lpush:   { calls: 1, usec: 14, usec_per_call: 14},
+    zadd:    { calls: 2, usec: 84, usec_per_call: 42},
+    hset:    { calls: 1, usec: 26, usec_per_call: 26},
+    keys:    { calls: 2, usec: 91, usec_per_call: 45.5},
+    info:    { calls: 5, usec: 807, usec_per_call: 161.4},
+    ttl:     { calls: 1, usec: 6, usec_per_call: 6},
     slowlog: { calls: 4, usec: 47, usec_per_call: 11.75 }
   });
   t.done();

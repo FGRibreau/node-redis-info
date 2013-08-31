@@ -63,7 +63,7 @@ Parser.prototype.parseDatabases = function(){
 
 Parser.prototype.parseCommands = function(){
   if(this._commands){return this._commands;}
-  return _.zipObject(this._commands = this._info
+  return this._commands = _.zipObject(this._info
     .filter(function(a){return a[0].indexOf('cmdstat_') === 0;})
     .map(apply(this._parseCommands)));
 };
