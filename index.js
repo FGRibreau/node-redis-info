@@ -43,7 +43,9 @@ function takeFirst(func){return takeN(func, 0);}
  * @return {Array}     Array of [key, value]
  */
 Parser.prototype._splitStr = function(str){
-  return str.split('\n').map(function(line){return line.trim().split(':');});
+  return str.split('\n')
+    .filter(function(line){return line.length > 0 && line.indexOf('#') !== 0;})
+    .map(function(line){return line.trim().split(':');});
 };
 
 Parser.prototype.parseDatabases = function(){
