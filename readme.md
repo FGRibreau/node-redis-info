@@ -1,4 +1,4 @@
-Redis-info [![Build Status](https://secure.travis-ci.org/FGRibreau/node-redis-info.png)](http://travis-ci.org/FGRibreau/node-redis-info)
+Redis-info [![Build Status](https://secure.travis-ci.org/FGRibreau/node-redis-info.png)](http://travis-ci.org/FGRibreau/node-redis-info) [![Gittip](http://badgr.co/gittip/fgribreau.png)](https://www.gittip.com/fgribreau/)
 ======================
 
 Overview
