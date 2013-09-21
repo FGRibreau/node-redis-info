@@ -38,6 +38,9 @@ undefined
   [ 'used_memory_peak_human', '18.11M' ] ]
 ```
 
+## Donate
+[Donate Bitcoins](https://coinbase.com/checkouts/fc3041b9d8116e0b98e7d243c4727a30)
+
 License
 -------
 Copyright (c) 2012 Francois-Guillaume Ribreau (npm@fgribreau.com)
