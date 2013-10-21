@@ -1,4 +1,4 @@
-Redis-info [![Build Status](https://secure.travis-ci.org/FGRibreau/node-redis-info.png)](http://travis-ci.org/FGRibreau/node-redis-info)
+Redis-info [![Build Status](https://secure.travis-ci.org/FGRibreau/node-redis-info.png)](http://travis-ci.org/FGRibreau/node-redis-info) [![Gittip](http://badgr.co/gittip/fgribreau.png)](https://www.gittip.com/fgribreau/)
 ======================
 
 Overview
@@ -37,6 +37,9 @@ undefined
   [ 'used_memory_peak', '18985904' ],
   [ 'used_memory_peak_human', '18.11M' ] ]
 ```
+
+## Donate
+[Donate Bitcoins](https://coinbase.com/checkouts/fc3041b9d8116e0b98e7d243c4727a30)
 
 License
 -------
