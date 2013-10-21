@@ -63,16 +63,16 @@ Parser.prototype.parseDatabases = function(){
 
 Parser.prototype.parseCommands = function(){
   return _.zipObject(this._info
-    .filter(function(a){return a[0].indexOf('cmdstat_') === 0;})
+    .filter(function(a){return defstr(a[0]).indexOf('cmdstat_') === 0;})
     .map(apply(this._parseCommands)));
 };
 
 Parser.prototype._parseCommands = function(v, a){
-  var val = _.zipObject(a.split(',').map(split('=')));
+  var val = _.zipObject(defstr(a).split(',').map(split('=')));
   if(_.has(val, 'calls')){val.calls = parseInt(val.calls, 10);}
   if(_.has(val, 'usec')){val.usec = parseInt(val.usec, 10);}
   if(_.has(val, 'usec_per_call')){val.usec_per_call = parseFloat(val.usec_per_call, 10);}
-  return [v.split('_')[1], val];
+  return [defstr(v).split('_')[1], val];
 };
 
 Parser.prototype.parseFields = function() {
@@ -90,7 +90,7 @@ Parser.prototype.parseFields = function() {
 };
 
 Parser.prototype._parseDatabaseInfo = function(dbName, value) {
-  var values = value.split(',');
+  var values = defstr(value).split(',');
 
   function extract(param){
     return parseInt(defint(defstr(_.detect(values, startWith(param))).split('=')[1]), 10);

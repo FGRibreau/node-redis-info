@@ -11,6 +11,7 @@ exports['constructor'] = function(t){
   t.done();
 };
 
+
 exports['.fields'] = function(t){
   t.expect(1);
   var parser = redis_info.parse(info + info_cmds);
@@ -76,6 +77,12 @@ exports['.fields'] = function(t){
   t.done();
 };
 
+exports['.fields with empty db'] = function(t){
+  t.expect(1);
+  var parser = redis_info.parse("db0\r\n");
+  t.deepEqual(parser.fields.databases, { '0': { keys: 0, expires: 0 } });
+  t.done();
+};
 
 exports['_parseDatabaseInfo'] = function(t){
   var parser = redis_info.parse(info);
