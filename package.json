@@ -2,6 +2,10 @@
   "name": "redis-info",
   "version": "2.0.2",
   "description": "Info parser for Redis used",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FGRibreau/node-redis-info.git"
+  },
   "main": "index.js",
   "scripts": {
       "test": "node_modules/nodeunit/bin/nodeunit test/*.test.js"
