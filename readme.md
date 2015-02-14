@@ -1,4 +1,6 @@
-Redis-info [![Build Status](https://secure.travis-ci.org/FGRibreau/node-redis-info.png)](http://travis-ci.org/FGRibreau/node-redis-info)
+Redis-info [![Build Status](https://drone.io/github.com/FGRibreau/node-redis-info/status.png)](https://drone.io/github.com/FGRibreau/node-redis-info/latest)[![Deps](https://david-dm.org/FGRibreau/node-redis-info.png)](https://david-dm.org/FGRibreau/node-redis-info)
+[![Version](http://badge.fury.io/js/redis-info.png)](https://david-dm.org/FGRibreau/check-build)
+
 ======================
 
 Overview
