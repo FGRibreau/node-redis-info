@@ -3,7 +3,6 @@ var t = require('chai').assert;
 var redis_info = require('../');
 var fix = require('./fixtures');
 
-
 describe('redis-info', function () {
   describe('.parse', function () {
     it('should parse an info str to an object', function (done) {

@@ -1,3 +1,4 @@
+'use strict';
 var _ = require('lodash');
 
 module.exports = {
@@ -18,7 +19,7 @@ function split(s) {
   return function (v) {
     return v.split(s);
   };
-};
+}
 
 function orEmptyStr(v) {
   return v || '';
@@ -48,7 +49,7 @@ function splitStr(str) {
     .map(function (line) {
       return line.trim().split(':');
     });
-};
+}
 
 function parseDatabases(info) {
   return info
@@ -75,7 +76,7 @@ function parseDatabases(info) {
       };
       return m;
     }, {});
-};
+}
 
 function parseCommands(info) {
   return _.zipObject(info.filter(function (a) {
@@ -96,8 +97,7 @@ function parseCommands(info) {
       }
       return [orEmptyStr(v).split('_')[1], val];
     }));
-};
-
+}
 
 function parseFields(info) {
   var fields = info.reduce(function (m, v) {
@@ -112,4 +112,4 @@ function parseFields(info) {
   });
 
   return fields;
-};
+}
