@@ -1,4 +1,4 @@
-Redis-info [![Build Status](https://secure.travis-ci.org/FGRibreau/node-redis-info.png)](http://travis-ci.org/FGRibreau/node-redis-info) [![Gittip](http://badgr.co/gittip/fgribreau.png)](https://www.gittip.com/fgribreau/)
+Redis-info [![Build Status](https://secure.travis-ci.org/FGRibreau/node-redis-info.png)](http://travis-ci.org/FGRibreau/node-redis-info)
 ======================
 
 Overview
@@ -18,24 +18,10 @@ Usage
 ```
 > var info = require('redis-info').parse("redis_version:2.4.10\nredis_git_sha1:00000000\nredis_git_dirty:0\narch_bits:64\n ...");
 undefined
-> info.databases
-[ { index: 0,
-    keys: 27012,
-    expires: 18 },
-  { index: 15, keys: 1, expires: 0 } ]
-> info.fields.redis_version
+> info.redis_version
 2.4.10
-> info.fields.redis_git_dirty
+> info.redis_git_dirty
 0
-> info.startWith('pubsub')
-[ [ 'pubsub_channels', '2' ],
-  [ 'pubsub_patterns', '0' ] ]
-> info.contains('memory')
-[ [ 'used_memory', '15080416' ],
-  [ 'used_memory_human', '14.38M' ],
-  [ 'used_memory_rss', '21258240' ],
-  [ 'used_memory_peak', '18985904' ],
-  [ 'used_memory_peak_human', '18.11M' ] ]
 ```
 
 ## Donate
