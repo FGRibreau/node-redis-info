@@ -60,7 +60,7 @@ function parseDatabases(info) {
       var values = orEmptyStr(value).split(',');
 
       function extract(param) {
-        return parseInt(orEmptyStr(_.detect(values, startWith(param))).split('=')[1] || 0, 10);
+        return parseInt(orEmptyStr(_.find(values, startWith(param))).split('=')[1] || 0, 10);
       }
 
       return {
@@ -79,13 +79,13 @@ function parseDatabases(info) {
 }
 
 function parseCommands(info) {
-  return _.zipObject(info.filter(function (a) {
+  return _.fromPairs(info.filter(function (a) {
       return orEmptyStr(a[0]).indexOf('cmdstat_') === 0;
     })
     .map(function _parseCommands(args) {
       var v = args[0];
       var a = args[1];
-      var val = _.zipObject(orEmptyStr(a).split(',').map(split('=')));
+      var val = _.fromPairs(orEmptyStr(a).split(',').map(split('=')));
       if (_.has(val, 'calls')) {
         val.calls = parseInt(val.calls, 10);
       }
