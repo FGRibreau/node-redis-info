@@ -1,8 +1,6 @@
 # Redis-info
 
-[![Build Status](https://img.shields.io/circleci/project/github/FGRibreau/node-redis-info.svg)](https://circleci.com/gh/FGRibreau/node-redis-info/)
-[![Deps](https://img.shields.io/david/FGRibreau/node-redis-info.svg)](https://david-dm.org/FGRibreau/node-redis-info) [![NPM version](https://img.shields.io/npm/v/redis-info.svg)]
-[![Downloads](http://img.shields.io/npm/dm/redis-info.svg)](https://www.npmjs.com/package/redis-info)
+[![Build Status](https://img.shields.io/circleci/project/github/FGRibreau/node-redis-info.svg)](https://circleci.com/gh/FGRibreau/node-redis-info/) [![Deps](https://img.shields.io/david/FGRibreau/node-redis-info.svg)](https://david-dm.org/FGRibreau/node-redis-info) [![NPM version](https://img.shields.io/npm/v/redis-info.svg)](https://www.npmjs.com/package/redis-info) [![Downloads](http://img.shields.io/npm/dm/redis-info.svg)](https://www.npmjs.com/package/redis-info)
 
 Overview
 --------
