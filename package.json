@@ -1,7 +1,7 @@
 {
   "name": "redis-info",
   "version": "3.0.6",
-  "description": "Info parser for Redis",
+  "description": "Info output parser for Redis",
   "repository": {
     "type": "git",
     "url": "https://github.com/FGRibreau/node-redis-info.git"
