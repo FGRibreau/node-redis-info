@@ -1,12 +1,13 @@
-Redis-info [![Build Status](https://drone.io/github.com/FGRibreau/node-redis-info/status.png)](https://drone.io/github.com/FGRibreau/node-redis-info/latest)[![Deps](https://david-dm.org/FGRibreau/node-redis-info.png)](https://david-dm.org/FGRibreau/node-redis-info)
-[![Version](http://badge.fury.io/js/redis-info.png)](https://david-dm.org/FGRibreau/check-build)
+# Redis-info
 
-======================
+[![Build Status](https://img.shields.io/circleci/project/github/FGRibreau/node-redis-info.svg)](https://circleci.com/gh/FGRibreau/node-redis-info/)
+[![Deps](https://img.shields.io/david/FGRibreau/node-redis-info.svg)](https://david-dm.org/FGRibreau/node-redis-info) [![NPM version](https://img.shields.io/npm/v/redis-info.svg)]
+[![Downloads](http://img.shields.io/npm/dm/redis-info.svg)](https://www.npmjs.com/package/redis-info)
 
 Overview
 --------
 
- Redis info string parser
+Redis info string parser
 
 Npm
 ------------
@@ -18,7 +19,7 @@ npm install redis-info
 Usage
 --------
 ```
-> var info = require('redis-info').parse("redis_version:2.4.10\nredis_git_sha1:00000000\nredis_git_dirty:0\narch_bits:64\n ...");
+> const info = require('redis-info').parse("redis_version:2.4.10\nredis_git_sha1:00000000\nredis_git_dirty:0\narch_bits:64\n ...");
 undefined
 > info.redis_version
 2.4.10
@@ -31,7 +32,7 @@ undefined
 
 License
 -------
-Copyright (c) 2012 Francois-Guillaume Ribreau (npm@fgribreau.com)
+Copyright (c) 2019 Francois-Guillaume Ribreau (npm@fgribreau.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
