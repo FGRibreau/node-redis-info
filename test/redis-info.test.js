@@ -11,6 +11,13 @@ describe('redis-info', function () {
       done();
     });
 
+    it('should handle field values containing the colon character', function (done) {
+      var parsedInfo = redis_info.parse('# Server\r\nconfig_file:Y:\\redis\\redis.conf\r\n');
+      t.isObject(parsedInfo);
+      t.equal(parsedInfo.config_file, 'Y:\\redis\\redis.conf');
+      done();
+    });
+
     it('should return an empty DB if the database keys are not defined', function (done) {
       var parser = redis_info.parse("db0\r\n");
       t.deepEqual(parser.databases, {
