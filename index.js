@@ -104,7 +104,7 @@ function parseFields(info) {
     if (!v[0].trim() || v[0].indexOf('db') === 0 ||  v[0].indexOf('cmdstat_') === 0) {
       return m;
     }
-    m[v[0]] = v[1];
+    m[v[0]] = v.slice(1).join(':');
     return m;
   }, {
     databases: parseDatabases(info),
