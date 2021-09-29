@@ -1,6 +1,6 @@
 # Redis-info
 
-[![Build Status](https://img.shields.io/circleci/project/github/FGRibreau/node-redis-info.svg)](https://circleci.com/gh/FGRibreau/node-redis-info/) [![Deps](https://img.shields.io/david/FGRibreau/node-redis-info.svg)](https://david-dm.org/FGRibreau/node-redis-info) [![NPM version](https://img.shields.io/npm/v/redis-info.svg)](https://www.npmjs.com/package/redis-info) [![Downloads](http://img.shields.io/npm/dm/redis-info.svg)](https://www.npmjs.com/package/redis-info) [![Slack](https://img.shields.io/badge/Slack-Join%20our%20tech%20community-17202A?logo=slack)](https://join.slack.com/t/fgribreau/shared_invite/zt-edpjwt2t-Zh39mDUMNQ0QOr9qOj~jrg)
+[![Node.js CI](https://github.com/FGRibreau/node-redis-info/actions/workflows/ci.yaml/badge.svg)](https://github.com/FGRibreau/node-redis-info/actions/workflows/ci.yaml) [![Deps](https://img.shields.io/david/FGRibreau/node-redis-info.svg)](https://david-dm.org/FGRibreau/node-redis-info) [![NPM version](https://img.shields.io/npm/v/redis-info.svg)](https://www.npmjs.com/package/redis-info) [![Downloads](http://img.shields.io/npm/dm/redis-info.svg)](https://www.npmjs.com/package/redis-info) [![Slack](https://img.shields.io/badge/Slack-Join%20our%20tech%20community-17202A?logo=slack)](https://join.slack.com/t/fgribreau/shared_invite/zt-edpjwt2t-Zh39mDUMNQ0QOr9qOj~jrg)
 
 Overview
 --------
