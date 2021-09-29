@@ -66,13 +66,15 @@ function parseDatabases(info) {
       return {
         index: parseInt(dbName.substr(2), 10),
         keys: extract('keys'),
-        expires: extract('expires')
+        expires: extract('expires'),
+        avg_ttl: extract('avg_ttl')
       };
     })
     .reduce(function (m, v) {
       m[v.index] = {
         keys: v.keys,
-        expires: v.expires
+        expires: v.expires,
+        avg_ttl: v.avg_ttl
       };
       return m;
     }, {});
