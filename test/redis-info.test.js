@@ -23,7 +23,8 @@ describe('redis-info', function () {
       t.deepEqual(parser.databases, {
         '0': {
           keys: 0,
-          expires: 0
+          expires: 0,
+          avg_ttl: 0
         }
       });
       done();
