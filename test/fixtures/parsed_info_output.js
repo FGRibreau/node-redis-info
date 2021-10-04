@@ -46,11 +46,13 @@ module.exports = {
   databases: {
     '0': {
       keys: 27012,
-      expires: 18
+      expires: 18,
+      avg_ttl: 149384827
     },
     '15': {
       keys: 1,
-      expires: 0
+      expires: 0,
+      avg_ttl: 0
     }
   },
   commands: {
